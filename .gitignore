@@ -1,0 +1,8 @@
+__pycache__
+.ipynb_checkpoints
+myenv/
+*.rtf
+*.pkl
+*.ipynb
+*.txt
+*.csv
