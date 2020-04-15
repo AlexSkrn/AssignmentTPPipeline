@@ -56,11 +56,11 @@ class NumericalImputer(BaseEstimator, TransformerMixin):
             self.variables = variables
 
     def fit(self, X, y=None):
-        # persist mode in a dictionary
+        # persist median in a dictionary
         self.imputer_dict_ = {}
 
         for feature in self.variables:
-            self.imputer_dict_[feature] = X[feature].mode()[0]
+            self.imputer_dict_[feature] = X[feature].median()
         return self
 
     def transform(self, X):
